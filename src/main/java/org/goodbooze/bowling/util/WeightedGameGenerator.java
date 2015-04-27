@@ -6,6 +6,12 @@ import org.goodbooze.bowling.exceptions.TooManyPinsException;
 import org.goodbooze.bowling.games.TenPinGame;
 import org.goodbooze.bowling.generator.GameGenerator;
 
+/**
+ * Class to generate statistically weighted games given a weighted frame generator.
+ * 
+ * @author Jeff
+ *
+ */
 public class WeightedGameGenerator implements GameGenerator {
 
 	private WeightedFrameGenerator frameGenerator;

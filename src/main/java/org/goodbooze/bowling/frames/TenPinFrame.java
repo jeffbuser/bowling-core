@@ -5,13 +5,18 @@ import org.goodbooze.bowling.exceptions.InvalidFrameNumber;
 import org.goodbooze.bowling.exceptions.NotTenthFrameException;
 import org.goodbooze.bowling.exceptions.TooManyPinsException;
 
+/**
+ * Frame class to be used for classic Ten Pin Game.
+ * 
+ * @author Jeff
+ *
+ */
 public class TenPinFrame implements Frame {
 
 	private int firstBall;
 	private int secondBall;
 	private int fillBall;
 	
-	private boolean isTenthFrame;
 	private int frameNumber;
 	private int score;
 	private boolean hasCompleted;

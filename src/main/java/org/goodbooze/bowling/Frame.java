@@ -4,6 +4,12 @@ import org.goodbooze.bowling.exceptions.InvalidFrameNumber;
 import org.goodbooze.bowling.exceptions.NotTenthFrameException;
 import org.goodbooze.bowling.exceptions.TooManyPinsException;
 
+/**
+ * Interface for a bowling frame.
+ * 
+ * @author Jeff
+ *
+ */
 public interface Frame {
 	
 	public void setFrameNumber(int frameNumber) throws InvalidFrameNumber;

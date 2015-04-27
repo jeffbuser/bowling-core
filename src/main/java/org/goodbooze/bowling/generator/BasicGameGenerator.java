@@ -11,8 +11,8 @@ import org.goodbooze.bowling.games.TenPinGame;
 
 public class BasicGameGenerator implements GameGenerator{
 
-	// using mod function need to use 11 in order to 
-	private static final int STRIKE_MOD = 10;
+	// constant for number of pins in a rack 
+	private static final int TOTAL_PINS = 10;
 	
 	public Game generateGame() {
 		TenPinGame game = new TenPinGame();
@@ -36,29 +36,29 @@ public class BasicGameGenerator implements GameGenerator{
 	}
 
 	public Frame populateFrame(Frame frame) throws TooManyPinsException, InvalidFrameNumber, NotTenthFrameException {
-		int firstBall = randomPinGenerator(STRIKE_MOD);
+		int firstBall = randomPinGenerator(TOTAL_PINS);
 		
 		int secondBall = 0;
 		
 		int fillBall = 0;
 		
 		if (firstBall < 10) {
-			secondBall = randomPinGenerator(STRIKE_MOD - firstBall);
+			secondBall = randomPinGenerator(TOTAL_PINS - firstBall);
 		}
 		
 		int frameIndex = frame.getFrameNumber();
 		if (frameIndex  == 10) {
 			
 			if (firstBall == 10) {
-				secondBall = randomPinGenerator(STRIKE_MOD);
+				secondBall = randomPinGenerator(TOTAL_PINS);
 				
 				if (secondBall == 10) {
-					fillBall = randomPinGenerator(STRIKE_MOD);
+					fillBall = randomPinGenerator(TOTAL_PINS);
 				} else {
-					fillBall = randomPinGenerator(STRIKE_MOD - secondBall);
+					fillBall = randomPinGenerator(TOTAL_PINS - secondBall);
 				}
 			} else if (firstBall + secondBall == 10){
-				fillBall = randomPinGenerator(STRIKE_MOD);
+				fillBall = randomPinGenerator(TOTAL_PINS);
 			}
 			
 		}

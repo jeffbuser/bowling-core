@@ -4,6 +4,12 @@ import java.util.List;
 
 import org.goodbooze.bowling.Frame;
 
+/**
+ * Simple scoring engine class for a ten pin game.
+ * 
+ * @author Jeff
+ *
+ */
 public class SimpleTenPinScoringEngine implements ScoringEngine {
 
 	public int getScore(List<Frame> frames) {

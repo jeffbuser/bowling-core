@@ -12,7 +12,7 @@ import org.goodbooze.bowling.scoring.SimpleTenPinScoringEngine;
 
 /**
  * Class to represent the "normal" game of bowling that is
- * sometimes refered to as ten pin bowling.
+ * sometimes referred to as ten pin bowling.
  * 
  * @author Jeff
  *
@@ -21,10 +21,14 @@ public class TenPinGame implements Game {
 
 	private List<Frame> frames = new ArrayList<Frame>(10);
 	
+	private int gameId;
+	
 	private int score = 0;
 	private int scoreFrame = 1;
 	
 	private ScoringEngine scoringEngine;
+	
+	private int bowlerId;
 	
 	public TenPinGame() {
 		for (int i=1; i<=10; i++) {
@@ -63,6 +67,22 @@ public class TenPinGame implements Game {
 
 	public void setScoringEngine(ScoringEngine scoringEngine) {
 		this.scoringEngine = scoringEngine;
+	}
+
+	public int getBowlerId() {
+		return bowlerId;
+	}
+
+	public void setBowlerId(int bowlerId) {
+		this.bowlerId = bowlerId;
+	}
+
+	public int getGameId() {
+		return gameId;
+	}
+
+	public void setGameId(int gameId) {
+		this.gameId = gameId;
 	}
 	
 	

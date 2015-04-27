@@ -3,6 +3,12 @@ package org.goodbooze.bowling.util;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Class to generate a frame based on weighted averages of individual shots.
+ * 
+ * @author Jeff
+ *
+ */
 public class WeightedFrameGenerator {
 
 	private Map<Integer, Integer> firstShotWeighted = new HashMap<Integer, Integer>();

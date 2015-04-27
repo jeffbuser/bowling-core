@@ -7,7 +7,8 @@ import org.goodbooze.bowling.bowler.TenPinBowlerShotStatistics.ShotStatistic;
 
 /**
  * Factory class that creates a weighted frame generator that can be
- * used to generate a statistically weighted game given a bowlers statistics
+ * used to generate a statistically weighted game given a bowlers statistics.
+ * 
  * @author Jeff
  *
  */

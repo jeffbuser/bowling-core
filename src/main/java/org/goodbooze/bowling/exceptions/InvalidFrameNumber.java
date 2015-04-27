@@ -1,5 +1,11 @@
 package org.goodbooze.bowling.exceptions;
 
+/**
+ * Exception to represent an invalid frame number.
+ * 
+ * @author Jeff
+ *
+ */
 public class InvalidFrameNumber extends Exception {
 
 	public InvalidFrameNumber(String message) {
